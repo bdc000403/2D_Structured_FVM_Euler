@@ -1,5 +1,3 @@
-#include "../header/Config.h"
-#include "../header/grid.h"
 #include "../header/Solver.h"
 #include <iostream>
 #include <string>
@@ -8,6 +6,7 @@ int main() {
 
 	std::cout << std::endl;
 	std::cout << "	2D Euler Equation Solver for Structured Grid" << std::endl;
+	std::cout << std::endl;
 
 	Config& config = Config::get_instance();		
 	if (config.read_config()) {}

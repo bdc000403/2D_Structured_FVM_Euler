@@ -113,25 +113,6 @@ void Spatialdiscrete::Cal_Residual(std::vector<double>& Solution, std::vector<do
 	
 		}
 	}
-
-
-
-
-	for (int jcell = 0; jcell < num_center_y; jcell++) {
-		for (int icell = 0; icell < num_center_x; icell++) {
-			for (int var = 0; var < 4; var++) {
-				cell_index = var + 4 * (icell + num_center_x * jcell);
-
-				if (abs(Residual[cell_index]) < pow(10, -10)) {
-
-					Residual[cell_index ] = 0;//south
-					
-				}
-			}
-		}
-	}
-
-
 }
 
 double Spatialdiscrete::Cal_dt(std::vector<double>& Solution) {
